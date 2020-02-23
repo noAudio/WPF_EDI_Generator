@@ -20,9 +20,21 @@ namespace DrLitovs837pGenerator
     /// </summary>
     public partial class MainWindow : Window
     {
+        string selectedFileFormat = "";
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void radioButton_Copy_Checked(object sender, RoutedEventArgs e)
+        {
+            selectedFileFormat = "Google Sheets";
+        }
+
+        private void radioButton_Copy1_Checked(object sender, RoutedEventArgs e)
+        {
+            selectedFileFormat = "Local Excel";
         }
     }
 }

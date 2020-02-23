@@ -5,6 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DrLitovs837pGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="400">
-    <Grid/>
+        Title="MainWindow" Height="450" Width="470">
+    <Grid>
+        <Label x:Name="label" Content="EDI 837p Generator" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="287" FontSize="30"/>
+        <Grid x:Name="Input_Options_Grid" Margin="10,64,104,200">
+            <Label x:Name="label1" Content="Choose where the data will be loaded from: " HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.421,-0.564" FontSize="16"/>
+            <Grid Margin="0,42,8,41">
+                <RadioButton x:Name="radioGoogleSheets" Content="Google Sheets" VerticalAlignment="Top" Margin="5,0,85,0" Checked="radioButton_Copy_Checked"/>
+                <RadioButton x:Name="radioExcelFile" Content="Local Excel File" HorizontalAlignment="Left" Margin="108,0,0,0" VerticalAlignment="Top" Checked="radioButton_Copy1_Checked" Width="126" IsChecked="True"/>
+            </Grid>
+            <Grid Margin="6,69,197,3">
+                <Button x:Name="button" Content="..." HorizontalAlignment="Left" Margin="0,3,0,0" VerticalAlignment="Top" Width="24"/>
+                <Label x:Name="label2" Content="Select excel file" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.342,0.115" Height="37"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="10,174,104,119">
+            <Label x:Name="label1_Copy" Content="Choose the output folder: " HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.421,-0.564" FontSize="16"/>
+            <Grid Margin="6,31,72,100">
+                <Button x:Name="button1" Content="..." HorizontalAlignment="Left" Margin="0,3,0,-26" VerticalAlignment="Top" Width="24" Height="23"/>
+                <Label x:Name="label3" Content="Select location" HorizontalAlignment="Left" Margin="29,3,0,-39" VerticalAlignment="Top" RenderTransformOrigin="0.342,0.115" Width="114" Height="36"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="15,262,104,159">
+            <CheckBox x:Name="checkBox" Content="Continue from last record" HorizontalAlignment="Left" VerticalAlignment="Top" Width="423" Height="20" Margin="0,-3,0,-17"/>
+            <CheckBox x:Name="checkBox_Copy" Content="Open folder when done" HorizontalAlignment="Left" Margin="0,17,0,-41" VerticalAlignment="Top" Width="423" Height="24"/>
+        </Grid>
+        <Button x:Name="button2" Content="Generate 837p Forms" HorizontalAlignment="Left" Margin="304,356,0,0" VerticalAlignment="Top" Width="134" Height="25"/>
+    </Grid>
 </Window>
