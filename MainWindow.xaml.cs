@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +22,8 @@ namespace DrLitovs837pGenerator
     /// </summary>
     public partial class MainWindow : Window
     {
-        string selectedFileFormat = "";
+        string selectedFileFormat;
+        string recordsFilePath;
 
         public MainWindow()
         {
@@ -35,6 +38,18 @@ namespace DrLitovs837pGenerator
         private void radioButton_Copy1_Checked(object sender, RoutedEventArgs e)
         {
             selectedFileFormat = "Local Excel";
+        }
+
+        private void buttonSelectLocalFile_Click(object sender, RoutedEventArgs e)
+        {
+            // create an object to handle grabbing a file
+            OpenFileDialog localFileLocation = new OpenFileDialog();
+            if (localFileLocation.ShowDialog() == true)
+            {
+                recordsFilePath = localFileLocation.FileName;
+                labelConsoleOutput.Content = recordsFilePath;
+            }
+            
         }
     }
 }
