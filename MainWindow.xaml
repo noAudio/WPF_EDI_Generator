@@ -6,7 +6,5 @@
         xmlns:local="clr-namespace:DrLitovs837pGenerator"
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="400">
-    <Grid>
-        
-    </Grid>
+    <Grid/>
 </Window>
