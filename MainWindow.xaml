@@ -8,22 +8,22 @@
         Title="MainWindow" Height="450" Width="470">
     <Grid x:Name="gridMainCanvas">
         <Label x:Name="labelAppTitle" Content="EDI 837p Generator" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="287" FontSize="30"/>
-        <Grid x:Name="gridInputOptions" Margin="10,64,104,200">
+        <Grid x:Name="gridInputOptions" Margin="10,64,104,245">
             <Label x:Name="labelHeaderChooseInputFolder" Content="Choose where the data will be loaded from: " HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.421,-0.564" FontSize="16"/>
-            <Grid x:Name="gridRadioGroupFileSelection" Margin="0,42,8,41">
-                <RadioButton x:Name="radioGoogleSheets" Content="Google Sheets" VerticalAlignment="Top" Margin="5,0,85,0" Checked="radioButton_Copy_Checked"/>
+            <Grid x:Name="gridRadioGroupFileSelection" Margin="0,42,8,-4">
+                <RadioButton x:Name="radioGoogleSheets" Content="Google Sheets" VerticalAlignment="Top" Margin="5,0,237,0" Checked="radioButton_Copy_Checked" IsEnabled="False"/>
                 <RadioButton x:Name="radioExcelFile" Content="Local Excel File" HorizontalAlignment="Left" Margin="108,0,0,0" VerticalAlignment="Top" Checked="radioButton_Copy1_Checked" Width="126" IsChecked="True"/>
             </Grid>
-            <Grid x:Name="gridInputSelection" Margin="6,69,197,3">
-                <Button x:Name="buttonSelectLocalFile" Content="..." HorizontalAlignment="Left" Margin="0,3,0,0" VerticalAlignment="Top" Width="24" Click="buttonSelectLocalFile_Click"/>
-                <Label x:Name="labelSelectFile" Content="Select excel file" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.342,0.115" Height="37"/>
+            <Grid x:Name="gridInputSelection" Margin="6,69,0,-42">
+                <Button x:Name="buttonSelectLocalFile" Content="..." HorizontalAlignment="Left" Margin="0,3,0,0" Width="24" Click="buttonSelectLocalFile_Click" Height="20" VerticalAlignment="Top"/>
+                <Label x:Name="labelSelectFile" Content="Select excel file" HorizontalAlignment="Left" Margin="29,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.342,0.115" Height="37" Width="303"/>
             </Grid>
         </Grid>
         <Grid x:Name="gridOutputOptions" Margin="10,174,104,119">
             <Label x:Name="labelHeaderChooseOutput" Content="Choose the output folder: " HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.421,-0.564" FontSize="16"/>
             <Grid x:Name="gridOutputSelection" Margin="6,31,72,100">
-                <Button x:Name="buttonSelectOutputFolder" Content="..." HorizontalAlignment="Left" Margin="0,3,0,-26" VerticalAlignment="Top" Width="24" Height="23"/>
-                <Label x:Name="labelSelectOutput" Content="Select location" HorizontalAlignment="Left" Margin="29,3,0,-39" VerticalAlignment="Top" RenderTransformOrigin="0.342,0.115" Width="114" Height="36"/>
+                <Button x:Name="buttonSelectOutputFolder" Content="..." HorizontalAlignment="Left" Margin="0,3,0,-26" VerticalAlignment="Top" Width="24" Height="23" Click="buttonSelectOutputFolder_Click"/>
+                <Label x:Name="labelSelectOutput" Content="Select location" HorizontalAlignment="Left" Margin="29,3,-19,-39" VerticalAlignment="Top" RenderTransformOrigin="0.342,0.115" Width="260" Height="36"/>
             </Grid>
         </Grid>
         <Grid x:Name="gridOtherOptions" Margin="15,262,104,159">
