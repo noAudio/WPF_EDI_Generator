@@ -44,8 +44,12 @@ namespace DrLitovs837pGenerator
         {
             // create an object to handle grabbing a file
             OpenFileDialog localFileLocation = new OpenFileDialog();
+            // add filter for excel files
+            localFileLocation.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+            // check if the windows file selector is launched
             if (localFileLocation.ShowDialog() == true)
             {
+                // pass the path of the file to the recordsFilePath string
                 recordsFilePath = localFileLocation.FileName;
                 labelConsoleOutput.Content = recordsFilePath;
             }
